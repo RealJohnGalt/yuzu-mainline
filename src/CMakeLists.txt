@@ -60,7 +60,17 @@ else()
         -Wmissing-declarations
         -Wno-attributes
         -Wno-unused-parameter
-        -mcx16
+        -march=native
+        -Ofast
+        -fuse-linker-plugin
+        -flto
+        -funroll-loops
+        -faggressive-loop-optimizations
+        -floop-interchange
+        -floop-strip-mine
+        -floop-block
+        -fgraphite-identity
+        -ftree-loop-distribution
         -lboost_context
         -lfmt
     )
