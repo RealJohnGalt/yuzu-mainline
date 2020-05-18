@@ -226,9 +226,16 @@ enum class OperationCode {
     VoteEqual,    /// (bool) -> bool
 
     ThreadId,       /// () -> uint
+    ThreadEqMask,   /// () -> uint
+    ThreadGeMask,   /// () -> uint
+    ThreadGtMask,   /// () -> uint
+    ThreadLeMask,   /// () -> uint
+    ThreadLtMask,   /// () -> uint
     ShuffleIndexed, /// (uint value, uint index) -> uint
 
-    MemoryBarrierGL, /// () -> void
+    Barrier,             /// () -> void
+    MemoryBarrierGroup,  /// () -> void
+    MemoryBarrierGlobal, /// () -> void
 
     Amount,
 };
